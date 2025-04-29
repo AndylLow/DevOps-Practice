@@ -1,8 +1,7 @@
 name: Pull Request Handler
 
 on:
-  pull_request:
-    types: [opened]
+  pull_request
 
 jobs:
   run-on-pr:
@@ -18,4 +17,4 @@ jobs:
       - name: run python
         run: python hello_world.py
 
-        
+
