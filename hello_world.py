@@ -1,5 +1,1 @@
-print("hello world Hello friend HELLO bro")
-print("Hello world")
-print("Hello world again")
-print("Hello Universe")
-print("Hello Boss")
+print("hello world")
