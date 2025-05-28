@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-uuid-logger-deployment
+  labels:
+    app: random-uuid-logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: random-uuid-logger
+  template:
+    metadata:
+      labels:
+        app: random-uuid-logger
+    spec:
+      containers:
+      - name: random-uuid-logger
+        image: sansar77/uuid-python-app:latest
