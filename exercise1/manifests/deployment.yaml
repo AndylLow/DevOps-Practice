@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: random-uuid-logger
-        image: sansar77/uuid-python-app:latest
+        image: sansar77/uuid-python-app:1.1

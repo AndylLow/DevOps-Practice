@@ -1,14 +1,16 @@
+"""A script that generates a UUID once at startup and logs it with a timestamp every 5 seconds."""
+
 import uuid
 import time
 from datetime import datetime, timezone
 
 # Generate and store the UUID once at startup
-random_string = str(uuid.uuid4())
+RANDOM_STRING = str(uuid.uuid4())
 
 def log_string():
-    # Get the current time in ISO 8601 format with UTC 'Z' suffix
+    """Logs the stored UUID along with the current UTC timestamp in ISO 8601 format."""
     timestamp = datetime.now(timezone.utc).isoformat()
-    print(f"{timestamp}: {random_string}")
+    print(f"{timestamp}: {RANDOM_STRING}")
 
 # Initial log
 log_string()
