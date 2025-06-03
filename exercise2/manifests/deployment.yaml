@@ -1,0 +1,23 @@
+# server-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-server
+  template:
+    metadata:
+      labels:
+        app: simple-server
+    spec:
+      containers:
+      - name: web
+        image: sansar77/flask-server:latest
+        env:
+        - name: PORT
+          value: "5000"
+        ports:
+        - containerPort: 5000
